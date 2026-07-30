@@ -1,0 +1,20 @@
+name: ORB Trading Bot
+on:
+  schedule:
+    - cron: '20 13 * * 1-5'   # 9:20 AM ET, Mon-Fri (see note below)
+  workflow_dispatch:           # lets you trigger it manually to test
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 130
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: pip install alpaca-py
+      - run: python orb_reversal.py
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
