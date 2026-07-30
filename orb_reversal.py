@@ -54,8 +54,8 @@ from alpaca.trading.enums import OrderSide, TimeInForce, OrderClass
 # ----------------------------------------------------------------------
 # CONFIG - edit these
 # ----------------------------------------------------------------------
-TICKERS = ["TSLA"]              # tell me which tickers and I'll update this
-POSITION_SIZE_USD = 1000        # fixed $ amount per trade (assumption - change freely)
+TICKERS = ["MSFT", "NVDA", "AAPL"]              # tell me which tickers and I'll update this
+POSITION_SIZE_USD = 10        # fixed $ amount per trade (assumption - change freely)
 LIQUIDITY_PCT = 0.25            # opening candle range must be >= 25% of ATR(14)
 ATR_PERIOD = 14
 BOX_VALID_MINUTES = 90          # box stays valid this long after it closes
