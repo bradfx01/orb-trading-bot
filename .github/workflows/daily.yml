@@ -1,8 +1,11 @@
 name: ORB Trading Bot
 on:
   schedule:
-    - cron: '20 13 * * 1-5'   # 9:20 AM ET, Mon-Fri (see note below)
-  workflow_dispatch:           # lets you trigger it manually to test
+    - cron: '20 13 * * 1-5'   # 9:20 AM ET (adjust for daylight saving as noted before)
+  workflow_dispatch:
+
+permissions:
+  contents: write             # lets the workflow save files back to the repo
 
 jobs:
   run-bot:
@@ -18,3 +21,10 @@ jobs:
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+      - name: Save trade log back to repo
+        run: |
+          git config user.name "orb-bot"
+          git config user.email "orb-bot@users.noreply.github.com"
+          git add orb_trade_log.csv
+          git diff --staged --quiet || git commit -m "Update trade log"
+          git push
