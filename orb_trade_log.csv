@@ -5,3 +5,6 @@ date,time_logged,symbol,event,box_low,box_high,bias,side,entry_price,stop_price,
 2026-08-10,12:13:07,MSFT,BOX_SET,502.78,508.8,bullish,,,,,,,
 2026-08-10,12:13:07,NVDA,SKIPPED_LIQUIDITY,,,,,,,,,,range=1.64 atr=7.77 needed=1.94
 2026-08-10,12:13:07,AAPL,BOX_SET,304.64,307.42,bearish,,,,,,,
+2026-08-11,12:14:42,MSFT,SKIPPED_LIQUIDITY,,,,,,,,,,range=3.88 atr=17.34 needed=4.34
+2026-08-11,12:14:42,NVDA,BOX_SET,219.26,222.09,bearish,,,,,,,
+2026-08-11,12:14:43,AAPL,BOX_SET,306.27,309.91,bearish,,,,,,,
