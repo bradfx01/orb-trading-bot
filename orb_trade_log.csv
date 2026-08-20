@@ -25,3 +25,6 @@ date,time_logged,symbol,event,box_low,box_high,bias,side,entry_price,stop_price,
 2026-08-18,11:02:49,MSFT,BOX_SET,477.265,484.07,bullish,,,,,,,
 2026-08-18,11:02:50,NVDA,BOX_SET,219.455,221.62,bullish,,,,,,,
 2026-08-18,11:02:50,AAPL,SKIPPED_LIQUIDITY,,,,,,,,,,range=1.94 atr=8.22 needed=2.06
+2026-08-20,11:07:50,MSFT,BOX_SET,479.79,483.76,bullish,,,,,,,
+2026-08-20,11:07:51,NVDA,BOX_SET,217.175,219.84,bullish,,,,,,,
+2026-08-20,11:07:51,AAPL,BOX_SET,316.77,320.28,bullish,,,,,,,
